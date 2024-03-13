@@ -1,0 +1,81 @@
+/*section-abaut-up*/
+.about-us {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+}
+.about-us-bg-image {
+    padding-top: 40px;
+    padding-bottom: 60px;
+}
+.title-about-us {
+    color: #e0d068;
+    margin-bottom: 40px;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 1.37;
+    letter-spacing: -0.03em;
+}
+
+.text-about-us {
+    color: #f3f3f3;
+    margin-bottom: 20px;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.04em;
+}
+
+.text-first-line {
+    margin-left: 20px;
+}
+
+.wrapper-text {
+    display: block;
+    max-width: 335px;
+}
+
+@media screen and (min-width:768px) {
+    .about-us-bg-image {
+        padding-top: 50px;
+    }
+
+    .about-us {
+        gap: 40px;
+        margin-bottom: 0px;
+    }
+
+    .wrapper-text {
+        min-width: 704px;
+    }
+
+    .title-abaut-us {
+        font-size: 44px;
+        line-height: 1.45;
+        letter-spacing: -0.03em;
+    }
+
+    .text-about-us {
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width:1280px) {
+    
+    .about-us-bg-image {
+            padding-top: 76px;
+        }
+
+    .about-us {
+        flex-direction: row;
+        gap: 50px;
+        align-items: flex-start;
+    }
+
+    .wrapper-text {
+        min-width: 436px;
+    }
+
+}
+

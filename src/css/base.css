@@ -1,0 +1,84 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: "Bree Serif", serif;
+    color: #191400;;
+    background-color: #050217;
+    margin: 0 auto;
+
+}
+
+
+.container {
+    min-width: 320px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+@media screen and (min-width: 375px) {
+    .container {
+        margin: 0 auto;
+        width: 375px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        width: 768px;
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .container {
+        width: 1136px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    overflow: hidden;
+}
+.scroll-to-top-btn {
+    display: none;
+    position: fixed;
+    bottom: 36px;
+    right: 36px;
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 9999;
+    background-color: #f3f3f3;
+    color: #7d7432;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: color 400ms linear;
+}
+
+.arrow-up-icon {
+    font-size: 24px;
+}
+
+.scroll-to-top-btn svg:hover,
+.scroll-to-top-btn svg:focus {
+    color: #938107;
+}
