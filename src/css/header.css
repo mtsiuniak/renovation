@@ -1,8 +1,13 @@
 
 .header-page {
-    background-color: #090427;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
     padding-top: 20px;
-    padding-bottom: 24px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid rgba(243, 236, 221, 0.9);
 }
 
 .header-container {
@@ -23,40 +28,35 @@
 }
 
 .navigation-link {
-    color: #f3ecdd;
+    position: relative;
+    display: block;
+    color: rgba(243, 236, 221, 0.9);
     font-size: 14px;
     font-weight: 400;
+    font-style: normal;
+    padding: 14px 28px;
+    border-radius: 12px;
     line-height: 1.29;
     letter-spacing: 0.02em;
     text-transform: uppercase;
-    transition: color 250ms linear;
 }
 
-.navigation-link:hover,
-.navigation-link:focus {
-    color: #7d7432;
+.navigation-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: rgba(243, 236, 221, 0);
+    transition: height 0.25s ease-out, background-color 0.25s ease-out;
 }
 
-.contact-information {
-    display: block;
-    padding: 14px 28px;
-    border-radius: 15px;
-    border: 2px solid #f3ecdd;
-    color: #f3ecdd;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1.43;
-    letter-spacing: 0.02em;
-    text-transform: uppercase;
-    transition: border-color 400ms ease-in;
+.navigation-link:hover::after {
+    height: 2px;
+    background-color: rgba(243, 236, 221, 0.9);
 }
 
-.contact-information:hover,
-.contact-information:focus {
-    color: #7d7432;
-    border-color: #7d7432;
-}
 .email-address {
     display: none;
 }
@@ -78,26 +78,26 @@
     align-items: center;
     padding: 8px;
     border-radius: 15px;
-    border: 1px solid #f3ecdd;
-    background: #252104;
-    transition: border 250ms linear;
+    border: 1px solid rgba(243, 236, 221, 0.9);
+    background: #3B3B3B;
+    transition: background-color 250ms linear;
 }
 
 .header-link:focus,
 .header-link:hover {
-    border-color: #7d7432;
+    background-color: #070707;
 }
 .icon-paint {
-    fill: #f3ecdd;
-    transition: scale 300ms linear, fill 300ms linear;
+    fill: rgba(243, 236, 221, 0.9);
+    transition: all 300ms linear, fill 300ms linear;
 }
 
 .icon-paint:hover, .icon-paint:focus {
-    fill: #7d7432;
+    fill: #3B3B3B;
 }
 
 .mobile-open-btn-icon {
-    stroke: #000000;
+    stroke: #070707;
 }
 
 .mobile-open-btn {
@@ -109,10 +109,6 @@
 }
 
 @media screen and (min-width: 768px) {
-
-    .header-page {
-        padding-bottom: 36px;
-    }
 
     .header-right-part {
         gap: 20px;
@@ -132,11 +128,6 @@
 }
 
 @media screen and (min-width: 1280px) {
-
-    .header-page {
-        position: relative;
-        padding-bottom: 12px;
-        }
 
     .mobile-open-btn {
         display: none;

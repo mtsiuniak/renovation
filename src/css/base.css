@@ -6,8 +6,8 @@ html {
 }
 body {
     font-family: "Bree Serif", serif;
-    color: #191400;;
-    background-color: #050217;
+    color: rgba(243, 236, 221, 0.9);
+    background-color: #070707;
     margin: 0 auto;
 
 }
@@ -60,25 +60,29 @@ body {
     bottom: 36px;
     right: 36px;
     width: 60px;
-    height: 60px;
     border: none;
+    height: 60px;
     border-radius: 50%;
     cursor: pointer;
     z-index: 9999;
-    background-color: #f3f3f3;
-    color: #7d7432;
+    background-color: #FAFAFA;
+    color: #3b3b3b;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: color 400ms linear;
+    transition: all 400ms linear;
+}
+
+.scroll-to-top-btn:hover,
+/* Застосовуємо ховер до елемента .scroll-to-top-btn */
+.scroll-to-top-btn:focus {
+   
+    /* Зміна кольору при ховері */
+    color: #070707;
+    /* Зміна кольору тексту при ховері */
 }
 
 .arrow-up-icon {
     font-size: 24px;
-}
-
-.scroll-to-top-btn svg:hover,
-.scroll-to-top-btn svg:focus {
-    color: #938107;
 }
