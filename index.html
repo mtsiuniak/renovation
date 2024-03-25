@@ -6,17 +6,7 @@
   <link rel="icon" href="/renovation/favicon.svg" type="image/svg+xml">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Renovation New Jersey</title>
-  <!-- Google fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&family=Manrope:wght@400;500;600&display=swap"
-    rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
   <!-- modern-normalize -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
@@ -25,7 +15,9 @@
   <!-- css styles -->
   
   <script type="module" crossorigin src="/renovation/commonHelpers.js"></script>
-  <link rel="stylesheet" href="/renovation/assets/index-4d6780d7.css">
+  <link rel="modulepreload" crossorigin href="/renovation/assets/vendor-95f56e30.js">
+  <link rel="stylesheet" href="/renovation/assets/vendor-9226c863.css">
+  <link rel="stylesheet" href="/renovation/assets/index-dc11d98a.css">
 </head>
 
 <body>
@@ -36,13 +28,16 @@
             <nav class="navigation">
                 <a class="logo" href="./index.html">
                     <svg class="icon icon-paint" width="44" height="44">
-                        <use xlink:href="/renovation/assets/icons-fb007f3b.svg#icon-paint"></use>
+                        <use xlink:href="/renovation/assets/icons-cffe10ad.svg#icon-paint"></use>
                     </svg>
                 </a>
 
                 <ul class="navigation-menu">
                     <li class="navigation-item">
                         <a class="navigation-link smooth-scroll" href="#about-us">About us</a>
+                    </li>
+                    <li class="navigation-item">
+                        <a class="navigation-link smooth-scroll" href="#gallery">Gallery</a>
                     </li>
                     <li class="navigation-item smooth-scroll">
                         <a class="navigation-link smooth-scroll" href="#order-link">Get information</a>
@@ -61,33 +56,10 @@
                 <a class="navigation-link email-address" href="mailto:taraskatyk@gmail.com">taraskatyk@gmail.com</a>
             </address>
 
-            <ul class="social-link-list">
-                <li class="social-list-item">
-                    <a class="header-link" href="https://www.facebook.com/goITclub/" target="_blank">
-                        <svg class="header-icons" width="28" height="28">
-                            <use href="/renovation/assets/icons-fb007f3b.svg#icon-facebook"></use>
-                        </svg>
-                    </a>
-                </li>
-                <li class="social-list-item">
-                    <a class="header-link" href="https://www.instagram.com/goitclub/" target="_blank">
-                        <svg class="header-icons" width="28" height="28">
-                            <use href="/renovation/assets/icons-fb007f3b.svg#icon-instagram"></use>
-                        </svg>
-                    </a>
-                </li>
-                <li class="social-list-item">
-                    <a class="header-link" href="https://www.youtube.com/c/GoIT" target="_blank">
-                        <svg class="header-icons" width="28" height="28">
-                            <use href="/renovation/assets/icons-fb007f3b.svg#icon-you-tube"></use>
-                        </svg>
-                    </a>
-                </li>
-            </ul>
 
             <button class="mobile-open-btn" type="button">
                 <svg class="mobile-open-btn-icon" width="44" height="30">
-                    <use href="/renovation/assets/icons-fb007f3b.svg#icon-burger"></use>
+                    <use href="/renovation/assets/icons-cffe10ad.svg#icon-burger"></use>
                 </svg>
             </button>
 
@@ -146,7 +118,7 @@
 </section>
 
     <section class="exp-card-section">
-    <h2 class="exp-title" id="portfolio">Our portfolio</h2>
+    <h2 class="cards-texp-title visually-hidden" id="portfolio">Expending cards</h2>
     <div class="container exp-container">
 
         <div class="panel" style="background-image: url('/renovation/assets/IMG_3545-50475299.jpg')">
@@ -160,41 +132,41 @@
         <div class="panel" style="background-image: url('/renovation/assets/IMG_3543-030f8f67.jpg')">
         </div>
     </div>
-    <div data-fancybox="gallery"></div>
-    <div class="link-container-gallery">
-        <a href="./gallery.html" class="more-photos" target="_self">*Click here to see more photos</a>
-    </div>
-
 </section>
     <section class="order-section section-background">
 
   <div class="order-section-wrapper container">
+
     <div class="order-form-box">
-      <h2 class="order-title" id="order-link">
-        <span class="order-color-span">Your order</span> is our priority:
+
+      <h2 class="order-title" id="order-link">Your order is our priority:
         Personalized approach and quality of service
       </h2>
+
       <form class="order-form" netlify>
+
         <label class="order-form-field-label" for="user-name">
-          <input class="order-form-field" type="text" name="user-name" id="user-name" required
-            placeholder="Enter your full name" pattern="[a-zA-Zа-яА-ЯіЇіІєЄйЙґҐ']+" />
+          <input class="order-form-field" type="text" name="name" id="user-name" required placeholder="Enter full name"
+            pattern="[a-zA-Zа-яА-ЯіЇіІєЄйЙґҐ']+" />
         </label>
 
         <label class="order-form-field-label" for="user-email">
-          <input class="order-form-field" type="email" name="user-email" id="user-email" placeholder="Enter your email"
-            required />
+          <input class="order-form-field" type="email" name="email" id="user-email"
+            pattern="(^[^\s@]+@[^\s@]+\.[^\s@]+$)" autocomplete="off" placeholder="Enter your email" required />
         </label>
 
-        <label class="order-form-field-label" for="user-comments">
-          <textarea class="order-form-comments" name="user-comments" id="user-comments"
-            placeholder="Comments"></textarea>
+        <label class="order-form-field-label" for="comments">
+          <textarea class="order-form-comments" name="comments" id="user-comments" placeholder="Comments"
+            required></textarea>
         </label>
+
         <button class="order-form-btn" type="submit">
           Send
           <svg class="order-form-btn-icon" width="26" height="10">
-            <use href="/renovation/assets/icons-fb007f3b.svg#icon-arrow"></use>
+            <use href="/renovation/assets/icons-cffe10ad.svg#icon-arrow"></use>
           </svg>
         </button>
+
       </form>
     </div>
     <div class="order-form-image-wrapper">
@@ -202,116 +174,165 @@
     </div>
   </div>
 </section>
-    <section class="faq-section" id="faq">
-    <div class="faq-container container">
-        <h1 class="faq-title">Frequently Asked Questions</h1>
-        <div class="faq-container">
-            <div class="faq">
-                <h3 class="faq-title">
-                    How long does a typical apartment renovation usually take?
-                </h3>
+    <section class="faq-section" id="faq-section">
+  <div class="container">
+    <h2 class="faq-title-section">FAQ</h2>
 
-                <p class="faq-text">
-                    The duration of an apartment renovation can vary depending on the scope of work and project
-                    complexity. Typically, a
-                    standard apartment renovation takes from several weeks to a month.
-                </p>
+    <ul class="faq-list accordion-container" id="accordion">
+      <li class="faq-list-item ac ac-first">
 
-                <button class="faq-toggle">
-                    <i class="fas fa-chevron-down"></i>
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
+        <h3 class="first-header ac-header">
+          <p>What programming languages are most often used in your
+            project?</p>
+          <button type="button" class="ac-trigger" aria-label="accordion button">
 
-            <div class="faq">
-                <h3 class="faq-title">
-                    What types of renovation services do you offer?
-                </h3>
-                <p class="faq-text">
-                    We specialize in a wide range of renovation services, including floor replacement, kitchen and
-                    bathroom
-                    remodeling, painting, and much more.
-                </p>
-                <button class="faq-toggle">
-                    <i class="fas fa-chevron-down"></i>
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-
-            <div class="faq">
-                <h3 class="faq-title">
-                    What materials do you use for renovations?
-                </h3>
-                <p class="faq-text">
-                    We use only high-quality materials from trusted suppliers to ensure durability and work quality.
-                </p>
-                <button class="faq-toggle">
-                    <i class="fas fa-chevron-down"></i>
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-
-            <div class="faq">
-                <h3 class="faq-title">
-                    Do you provide a warranty for your renovation work?
-                </h3>
-                <p class="faq-text">
-                    Yes, we provide a warranty for all completed work. Our team is always ready to address any issues
-                    that may arise
-                    after the completion of the renovation.
-                </p>
-                <button class="faq-toggle">
-                    <i class="fas fa-chevron-down"></i>
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-
-            <div class="faq">
-                <h3 class="faq-title">
-                    Can I get a free consultation before starting the renovation?
-                </h3>
-                <p class="faq-text">
-                    Of course! We are always happy to provide a free consultation and project evaluation before starting
-                    renovation
-                    work. Contact us to schedule a meeting.
-                </p>
-                <button class="faq-toggle">
-                    <i class="fas fa-chevron-down"></i>
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
+            <svg class="faq-accordion-icon" aria-label="accordion icon">
+              <use href="/renovation/assets/icons-cffe10ad.svg#icon-down"></use>
+            </svg>
+          </button>
+        </h3>
+        <div class="ac-panel">
+          <p class="ac-text">
+            In the field of web development, there are various technologies and
+            programming languages. Typically, this includes a combination of
+            frontend (client side) and backend (server side) languages.
+          </p>
         </div>
+      </li>
 
-    </div>
+      <li class="faq-list-item ac ac-second">
+
+        <h3 class="first-header ac-header">
+          <p>What programming languages are most often used in your
+            project?</p>
+          <button type="button" class="ac-trigger" aria-label="accordion button">
+
+            <svg class="faq-accordion-icon" aria-label="accordion icon">
+              <use href="/renovation/assets/icons-cffe10ad.svg#icon-down"></use>
+            </svg>
+          </button>
+        </h3>
+        <div class="ac-panel">
+          <p class="ac-text">
+            In the field of web development, there are various technologies and
+            programming languages. Typically, this includes a combination of
+            frontend (client side) and backend (server side) languages.
+          </p>
+        </div>
+      </li>
+      <li class="faq-list-item ac ac-first">
+
+        <h3 class="first-header ac-header">
+          <p>What programming languages are most often used in your
+            project?</p>
+          <button type="button" class="ac-trigger" aria-label="accordion button">
+
+            <svg class="faq-accordion-icon" aria-label="accordion icon">
+              <use href="/renovation/assets/icons-cffe10ad.svg#icon-down"></use>
+            </svg>
+          </button>
+        </h3>
+        <div class="ac-panel">
+          <p class="ac-text">
+            In the field of web development, there are various technologies and
+            programming languages. Typically, this includes a combination of
+            frontend (client side) and backend (server side) languages.
+          </p>
+        </div>
+      </li>
+
+      <li class="faq-list-item ac ac-second">
+
+        <h3 class="first-header ac-header">
+          <p>What programming languages are most often used in your
+            project?</p>
+          <button type="button" class="ac-trigger" aria-label="accordion button">
+
+            <svg class="faq-accordion-icon" aria-label="accordion icon">
+              <use href="/renovation/assets/icons-cffe10ad.svg#icon-down"></use>
+            </svg>
+          </button>
+        </h3>
+        <div class="ac-panel">
+          <p class="ac-text">
+            In the field of web development, there are various technologies and
+            programming languages. Typically, this includes a combination of
+            frontend (client side) and backend (server side) languages.
+          </p>
+        </div>
+      </li>
+
+      <li class="faq-list-item ac ac-first">
+
+        <h3 class="first-header ac-header">
+          <p>What programming languages are most often used in your
+            project?</p>
+          <button type="button" class="ac-trigger" aria-label="accordion button">
+
+            <svg class="faq-accordion-icon" aria-label="accordion icon">
+              <use href="/renovation/assets/icons-cffe10ad.svg#icon-down"></use>
+            </svg>
+          </button>
+        </h3>
+        <div class="ac-panel">
+          <p class="ac-text">
+            In the field of web development, there are various technologies and
+            programming languages. Typically, this includes a combination of
+            frontend (client side) and backend (server side) languages.
+          </p>
+        </div>
+      </li>
+
+      <li class="faq-list-item ac ac-second">
+
+        <h3 class="first-header ac-header">
+          <p>What programming languages are most often used in your
+            project?</p>
+          <button type="button" class="ac-trigger" aria-label="accordion button">
+
+            <svg class="faq-accordion-icon" aria-label="accordion icon">
+              <use href="/renovation/assets/icons-cffe10ad.svg#icon-down"></use>
+            </svg>
+          </button>
+        </h3>
+        <div class="ac-panel">
+          <p class="ac-text">
+            In the field of web development, there are various technologies and
+            programming languages. Typically, this includes a combination of
+            frontend (client side) and backend (server side) languages.
+          </p>
+        </div>
+      </li>
+    </ul>
+  </div>
 </section>
   </main>
 
   <footer class="footer">
     <div class="footer-container container">
-
-        <div class="footer-column">
-            <h3>Contact Us</h3>
-
-
-            <a class="contact-information phone-number phone-number-footer" href="tel:+16316336504">+1(631)-633-6504</a>
-            <a class="contact-information email-address email-address-footer"
-                href="mailto:taraskatyk@gmail.com">taraskatyk@gmail.com</a>
-        </div>
+        <h2 class="footer-title">Contact us</h2>
         <div class="footer-column">
 
-            <ul>
+            <ul class="footer-list">
+                <li>
+                    <a class="contact-information phone-number phone-number-footer"
+                        href="tel:+16316336504">(631)-633-6504</a>
+                </li>
+                <li>
+                    <a class="contact-information email-address email-address-footer"
+                        href="mailto:taraskatyk@gmail.com">taraskatyk@gmail.com</a>
+                </li>
                 <li><a href="#order-link">Order</a></li>
-                <li><a href="#about-us">About</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#about-us">About us</a></li>
+                <li><a href="">Gallery</a></li>
                 <li><a href="#faq">FAQ</a></li>
             </ul>
+
         </div>
 
-    </div>
-
-    <div class="footer-bottom">
-        <p>&copy; 2024 @mtsiuniak. All Rights Reserved.</p>
-    </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024. created by @mtsiuniak. </p>
+        </div>
 </footer>
 
   <button id="scrollToTopBtn" class="scroll-to-top-btn" title="Go to top">
@@ -322,31 +343,42 @@
     </svg>
   </button>
   <section class="mobile-menu">
+
   <button class="button-close" type="button">
     <svg class="close-img" width="18" height="18">
-      <use href="/renovation/assets/icons-fb007f3b.svg#icon-close"></use>
+      <use href="/renovation/assets/icons-cffe10ad.svg#icon-close"></use>
     </svg>
   </button>
-  <div class="tell-box">
-    <a class="menu-tel" href="tel:+380684439426">(631)-633-6504</a>
-  </div>
-  <div class="tell-box">
-    <a class="menu-tel" href="mailto:taraskatyk@gmail.com">taraskatyk@gmail.com</a>
-  </div>
+
+  <ul class="mob-menu-list">
+
+    <li>
+      <a class="mob-menu-link" href="tel:+380684439426">call me: (631)-633-6504</a>
+    </li>
+
+    <li>
+      <a class="mob-menu-link" href="mailto:taraskatyk@gmail.com">email: taraskatyk@gmail.com</a>
+    </li>
+
+    <li>
+      <a class="mob-menu-link" href="index.html#about-us">About us</a>
+    </li>
+
+    <li>
+      <a class="mob-menu-link" href="">Gallery</a>
+    </li>
+
+    <li>
+      <a class="mob-menu-link" href="index.html#faq">FAQ</a>
+    </li>
+
+    <li>
+      <a class="mob-menu-link" href="index.html#order-link">Get consultation</a>
+    </li>
+
+  </ul>
 
 
-  <div class="main-nav-box">
-    <ul class="main-nav-list">
-      <li><a href="index.html#about-us" class="main-nav-link">About us</a></li>
-      <li>
-        <a href="index.html#portfolio" class="main-nav-link">Our portfolio</a>
-      </li>
-      <li>
-        <a href="index.html#faq" class="main-nav-link">FAQ</a>
-      </li>
-      <li><a href="index.html#order-link" class="main-nav-link">Get consultation</a></li>
-    </ul>
-  </div>
 </section>
 
 
