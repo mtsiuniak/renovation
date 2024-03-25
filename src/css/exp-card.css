@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 
 .exp-card-section {
+    display: none;
     padding-top: 50px;
     padding-bottom: 50px;
 }
 
 .exp-title {
-color: #e0d068;
+color: #fafafa;
 font-size: 60px;
 font-weight: 400;
 line-height: normal;
@@ -20,41 +20,12 @@ overflow: hidden;
 justify-content: space-between;
 }
 
-.more-photos {
-display: inline-block;
-color: #f3f3f3;
-font-size: 32px;
-font-weight: 400;
-line-height: normal;
-letter-spacing: -0.04em;
-text-align: center;
-transition: all 250ms linear;
-border-radius: 15px;
-border: 2px solid #f3f3f3;
-padding: 8px 16px;
-max-width: 366px;
-margin-top: 16px;
-background-color: transparent;
-}
-
-.link-container-gallery {
-    display: flex;
-    justify-content: center;
-}
-
-.more-photos:hover, .more-photos:focus {
-color: #423902;
-background-color: #e6d048;
-border-color: #3e3709;
-}
-
 
 .panel {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     height: 68vh;
-    
     border-radius: 50px;
     color: #f3f3f3;
     cursor: pointer;
@@ -63,11 +34,7 @@ border-color: #3e3709;
     position: relative;
     transition: all 900ms ease-in;
 }
-@media screen and (max-width: 400px) {
-    .panel {
-        flex: 0.5;
-    }
-}
+
 
 .panel h3 {
     font-size: 24px;
@@ -86,23 +53,27 @@ border-color: #3e3709;
     opacity: 1;
     transition: opacity 0.3s ease-in 0.4s;
 }
-
-
-    .panel:nth-of-type(3),
-    .panel:nth-of-type(4),
-    .panel:nth-of-type(5) {
-        display: none;
-    }
+.panel:nth-of-type(1),
+.panel:nth-of-type(2),
+.panel:nth-of-type(3),
+.panel:nth-of-type(4),
+.panel:nth-of-type(5) {
+    display: none;
+}
     
 @media (min-width: 1280px){
-    .panel:nth-of-type(3),
-        .panel:nth-of-type(4),
-        .panel:nth-of-type(5) {
-            display: block;
-        }
-    
-    .more-photos {
-        padding: 12px 24px;
-        max-width: 768px;
-    }
+.exp-card-section {
+    display: block;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.panel:nth-of-type(1),
+.panel:nth-of-type(2),
+.panel:nth-of-type(3),
+.panel:nth-of-type(4),
+.panel:nth-of-type(5) {
+    display: block;
+}
+   
 }

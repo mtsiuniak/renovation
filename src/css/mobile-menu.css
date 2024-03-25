@@ -2,15 +2,19 @@
   position: fixed;
   top: 0;
   right: 0;
-  width: 70%;
-  height: 100%;
+  width: 100%;
+  height: 100svh;
   background-color: rgb(07, 07, 07);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: bottom;
   display: flex;
   flex-direction: column;
-  padding: 20px 20px 251px 20px;
+  justify-content: flex-start;
+  align-items: flex-end;
+  gap: 40px;
+  padding: 16px;
+  overflow-y: auto;
   z-index: 9999999;
   transform: translateX(100%);
   transition: transform 250ms linear;
@@ -19,12 +23,17 @@
 .mobile-menu.is-open {
   transform: translateX(0%);
 }
-
+.mob-menu-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: 80px;
+  gap: 24px;
+  font-size: 24px;
+}
 
 .button-close {
-  position: absolute;
-  top: 20px;
-  right: 20px;
   width: 36px;
   height: 36px;
   background-color: transparent;
@@ -40,55 +49,19 @@
   stroke: #fafafa;
 }
 
-.tell-box {
-  padding: 12px 20px;
-  border-radius: 15px;
-  border: 1px solid #fafafa;
-  margin-right: auto;
-  margin-bottom: 12px;
-}
-.menu-tel {
-  margin: 0;
-  padding: 0;
-  color: #fafafa;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 1.17;
-  text-transform: uppercase;
-}
 
-.main-nav-box {
-  margin-top: 30%;
-  height: 100%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.main-nav-list {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 20px;
-}
-.main-nav-link {
-  color: #f3f3f3;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.29;
-  text-transform: uppercase;
-}
 
 @media screen and (min-width: 768px) {
   .mobile-menu {
-    width: 380px;
-    padding: 20px 32px 364px;
-    
+    padding: 20px 32px;
+  }
+  .mob-menu-list {
+    gap: 46px;
   }
 
-  
+  .mob-menu-link {
+    font-size: 36px;
+  }
 
   .button-close {
     right: 32px;
@@ -98,11 +71,7 @@
     width: 44px;
     height: 44px;
   }
-
-  .menu-tel {
-    font-size: 14px;
-    line-height: 1.4;
-  }
+ 
 }
 @media screen and (min-width: 1280px) {
   .mobile-menu {

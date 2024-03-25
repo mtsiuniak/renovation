@@ -1,32 +1,37 @@
 <section class="order-section section-background">
 
   <div class="order-section-wrapper container">
+
     <div class="order-form-box">
-      <h2 class="order-title" id="order-link">
-        <span class="order-color-span">Your order</span> is our priority:
+
+      <h2 class="order-title" id="order-link">Your order is our priority:
         Personalized approach and quality of service
       </h2>
+
       <form class="order-form" netlify>
+
         <label class="order-form-field-label" for="user-name">
-          <input class="order-form-field" type="text" name="user-name" id="user-name" required
-            placeholder="Enter your full name" pattern="[a-zA-Zа-яА-ЯіЇіІєЄйЙґҐ']+" />
+          <input class="order-form-field" type="text" name="name" id="user-name" required placeholder="Enter full name"
+            pattern="[a-zA-Zа-яА-ЯіЇіІєЄйЙґҐ']+" />
         </label>
 
         <label class="order-form-field-label" for="user-email">
-          <input class="order-form-field" type="email" name="user-email" id="user-email" placeholder="Enter your email"
-            required />
+          <input class="order-form-field" type="email" name="email" id="user-email"
+            pattern="(^[^\s@]+@[^\s@]+\.[^\s@]+$)" autocomplete="off" placeholder="Enter your email" required />
         </label>
 
-        <label class="order-form-field-label" for="user-comments">
-          <textarea class="order-form-comments" name="user-comments" id="user-comments"
-            placeholder="Comments"></textarea>
+        <label class="order-form-field-label" for="comments">
+          <textarea class="order-form-comments" name="comments" id="user-comments" placeholder="Comments"
+            required></textarea>
         </label>
+
         <button class="order-form-btn" type="submit">
           Send
           <svg class="order-form-btn-icon" width="26" height="10">
             <use href="./img/icons.svg#icon-arrow"></use>
           </svg>
         </button>
+
       </form>
     </div>
     <div class="order-form-image-wrapper">

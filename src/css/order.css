@@ -11,16 +11,13 @@
     align-items: center;
     gap: 40px;
 }
-.order-color-span {
-    color: #7d7432;
-}
+
 .order-title {
-    color: #e0d068;
     font-size: 32px;
     font-weight: 500;
     line-height: 1.375;
     letter-spacing: -0.03em;
-    width: 335px;
+    max-width: 335px;
 }
 
 .order-form {
@@ -32,33 +29,57 @@
 
 .order-form-field {
     padding: 14px 16px;
-    width: 335px;
-    color: #7d7432;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: -0.02em;
-    border-radius: 15px;
-    border: 1px solid #7d7432;
-    background-color: transparent;
-    margin-bottom: 20px;
-    transition: border 250ms linear, color 250ms linear;
-}
-
-.order-form-comments {
-    width: 335px;
-    height: 196px;
-    padding: 14px 16px;
-    color: #f8f8f8;
+    width: 320px;
+    color: #fafafa;
     font-size: 14px;
     font-weight: 400;
     line-height: normal;
     letter-spacing: -0.02em;
     border-radius: 8px;
-    border: 1px solid #807313;
+    border: 1px solid #fafafa;
+    background-color: inherit;
+    margin-bottom: 20px;
+    transition: border 250ms linear, color 250ms linear;
+}
+.order-form-field:hover,
+.order-form-field:focus {
+    color: #fafafa;
+}
+
+.order-form-field:hover,
+.order-form-field:focus {
+    border: 1px solid #fafafa;
+}
+
+.order-form-field:hover,
+.order-form-field:focus {
+    background-color: #07070791;
+}
+
+.order-form-comments {
+    width: 320px;
+    height: 196px;
+    padding: 14px 16px;
+    color: #fafafa;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.02em;
+    border-radius: 8px;
+    border: 1px solid #fafafa;
     background-color: transparent;
     resize: none;
     margin-bottom: 40px;
+}
+.order-form-comments:hover,
+.order-form-comments:focus {
+    background-color: #070707;
+    color: #fafafa;
+}
+.order-form-btn-icon {
+    transform: rotate(-30deg);
+    fill: #070707;
+    margin-top: 5px;
 }
 
 .order-form-btn {
@@ -67,46 +88,32 @@
     width: 145px;
     height: 49px;
     padding: 14px 36px;
-    color: var(--white, #fcf9f9);
+    color: #070707;
     font-size: 14px;
     font-weight: 600;
     line-height: normal;
     letter-spacing: -0.04em;
     text-transform: uppercase;
-    background-color: #7d7432;
-    border-radius: 15px;
-    border: 1px solid #8b7c0f;
-    transition: border 250ms linear;
+    background-color: #fafafa;
+    border-radius: 8px;
+    border: 2px solid #fafafa;
+    transition: all 350ms linear;
 }
-
-.order-form-field:hover,
-.order-form-field:focus {
-    color: #f8f8f8;
-}
-
-.order-form-field:hover,
-.order-form-field:focus {
-    border: 1px solid #8e7f10;
-}
-
-.order-form-field:hover,
-.order-form-field:focus {
-    background-color: #0c0523;
-}
-.order-form-comments:hover, .order-form-comments:focus {
-        background-color: #0c0523;
-    }
-
 .order-form-btn:hover,
 .order-form-btn:focus {
-    border: 1px solid #ecd979;
+    scale: 1.05;
+    border: 1px solid #fafafa;
+    background-color: #070707;
+    color: #fafafa;
+    .order-form-btn-icon {
+        fill: #fafafa;
+        transform: rotate(180deg);
+    }
 }
 
-.order-form-btn-icon {
-    fill: #ecd979;
-    transform: rotate(-30deg);
-    margin-top: 5px;
-}
+
+
+
 
 /* SECTION YOUR ORDERS MOBILE STYLES */
 
@@ -165,7 +172,7 @@
         width: 168px;
         height: 50px;
         padding: 14px 39px;
-        color: var(--white, #fcf9f9);
+        color: #070707;
         font-size: 16px;
         margin-bottom: 100px;
     }

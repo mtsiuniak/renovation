@@ -1,4 +1,7 @@
-
+import Accordion from 'accordion-js';
+import 'accordion-js/dist/accordion.min.css';
+import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.css';
 // hero js start -----
 
 const loadText = document.querySelector('.loading-title')
@@ -15,7 +18,7 @@ function blurring() {
     clearInterval(int)
   }
 
-  loadText.innerText = `${load}%`
+  
   loadText.style.opacity = scale(load, 0, 100, 1, 0)
   bg.style.filter = `blur(${scale(load, 0, 60, 30, 0)}px)`
 }
@@ -60,19 +63,45 @@ scrollToTopBtn.addEventListener("click", () => {
 });
 // scroll top button end-----
 
-const faqItems = document.querySelectorAll('.faq');
-
-faqItems.forEach(item => {
-    const toggleButton = item.querySelector('.faq-toggle');
-    const faqText = item.querySelector('.faq-text');
-
-    toggleButton.addEventListener('click', () => {
-        if (item.classList.contains('active')) {
-            item.classList.remove('active');
-            faqText.style.display = 'none';
-        } else {
-            item.classList.add('active');
-            faqText.style.display = 'block';
-        }
-    });
+// FAQ start ================
+const accordion = new Accordion('#accordion', {
+  showMultiple: true,
 });
+// FAQ start ================
+
+// Order section start =======
+const orderBtn = document.querySelector('.order-form-btn')
+const form = document.querySelector('.order-form');
+
+orderBtn.addEventListener('click', onOrderBtn);
+
+function onOrderBtn(event) {
+  event.preventDefault();
+  const name = form.elements.name.value.trim();
+  const email = form.elements.email.value.trim();
+  const comments = form.elements.comments.value.trim();
+
+   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (!emailRegex.test(email)) {
+    
+    iziToast.warning({
+      title: 'Caution',
+      message: 'Enter a valid email address',
+      backgroundColor: '#fafafa',
+      color: '#070707'
+    });
+  }
+
+  if (!name || !email || !comments) {
+    event.preventDefault();
+    iziToast.warning({
+      title: 'Caution',
+      message: 'Fill in all fields',
+      backgroundColor: '#fafafa',
+      color: '#070707'
+    });
+  }
+  
+}
+// Order section end =========

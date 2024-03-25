@@ -1,3 +1,11 @@
+@font-face {
+    font-family: "Bree Serif";
+    src: url('../fonts/breeserif-regular-webfont.woff') format('woff'), url('../fonts/breeserif-regular-webfont.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -6,7 +14,7 @@ html {
 }
 body {
     font-family: "Bree Serif", serif;
-    color: rgba(243, 236, 221, 0.9);
+    color: #fafafa;
     background-color: #070707;
     margin: 0 auto;
 
@@ -36,9 +44,7 @@ body {
 
 @media screen and (min-width: 1280px) {
     .container {
-        width: 1136px;
-        padding-left: 16px;
-        padding-right: 16px;
+        width: 1280px;
     }
 }
 

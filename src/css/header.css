@@ -4,10 +4,10 @@
     top: 0;
     left: 0;
     width: 100%;
+    margin: 0 auto;
     z-index: 1000;
     padding-top: 20px;
     padding-bottom: 20px;
-    border-bottom: 2px solid rgba(243, 236, 221, 0.9);
 }
 
 .header-container {
@@ -113,6 +113,16 @@
     .header-right-part {
         gap: 20px;
     }
+    .address-info {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+    }
+    .email-address {
+        display: block;
+    }
 
     .mobile-open-btn-icon {
         width: 54px;
@@ -133,13 +143,7 @@
         display: none;
     }
 
-    .address-info {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        gap: 12px;
-    }
+    
 
     .navigation-menu {
         display: flex;
