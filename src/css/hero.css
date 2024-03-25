@@ -1,17 +1,17 @@
 
 .hero-section {
-  position: relative;
   background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1)),
       url(../img/gallery-pictures/hero-bg2.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   padding-top: 100px;
-  margin-bottom: 50px;
+  min-width: 320px;
   height: 100svh;
   filter: blur(0px);
-  overflow-y: auto;
+  overflow-y: hidden;
 }
+
 
 .hero-container {
   display: flex;
@@ -19,6 +19,7 @@
   align-items: center;
   justify-content: space-between; 
   gap: 40px; 
+  padding-bottom: 600px;
 }
 
 .main-title {

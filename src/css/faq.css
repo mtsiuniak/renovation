@@ -26,7 +26,7 @@
   align-items: center;
 }
 .faq-list-item p {
-  max-width: 450px;
+  max-width: 250px;
 }
 .ac-second {
   border-right: none;
@@ -35,13 +35,14 @@
 .faq-list .faq-list-item {
   background-color: #070707;
   padding: 32px 16px;
+  width: 100%;
   margin: 0;
 }
 .faq-list .ac {
   border-left: none;
   border-right: none;
   border-bottom: none;
-  
+
 }
 .faq-list .faq-list-item .ac-trigger {
   color: #fafafa;
@@ -54,17 +55,19 @@
 .faq-list .faq-list-item .ac-panel .ac-text {
 color: #f3ecdde6;
 }
+@media (min-width: 768px) {
+  .faq-list-item p {
+      max-width: 1050px;
+    }
+}
 
 @media (min-width: 1280px) {
   .faq-list-item {
     width: 600px;
   }
 
-  .faq-list .ac-third,.faq-list .ac-fifth,.faq-list .ac-first{
-    border-right: 1px solid white;
-  }
-
   .faq-list .faq-list-item {
     padding: 32px 20px;
   }
+    
 }

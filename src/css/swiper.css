@@ -1,0 +1,26 @@
+.swiper-section {
+    margin: 0 auto;
+    overflow: hidden;
+}
+.swiper-wrapper {
+    display: flex;
+}
+.swiper-pagination {
+    display: none;
+    visibility: collapse;
+    opacity: 0;
+}
+
+@media (min-width:768px) {
+    .swiper-section {
+        max-width: 768px;
+        
+    }
+}
+
+
+@media (min-width:1280px) {
+    .swiper-section {
+        max-width: 1280px;
+    }
+}

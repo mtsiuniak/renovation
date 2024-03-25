@@ -2,24 +2,49 @@ import Accordion from 'accordion-js';
 import 'accordion-js/dist/accordion.min.css';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.css';
+import Swiper from 'swiper/bundle';
+import 'swiper/css/bundle';
 // hero js start -----
 
-const loadText = document.querySelector('.loading-title')
-const bg = document.querySelector('.hero-section')
+const swiper = new Swiper('.swiper-container', {
+  direction: 'horizontal',
+  loop: true,
+  
+  autoplay: {
+    delay: 1500,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  slidesPerView: 1,
+  breakpoints: {
+    320: {
+      slidesPerView: 2,
+    },
+    768: {
+      slidesPerView: 3,
+    },
+    1440: {
+      slidesPerView: 4,
+    },
+  },
+});
 
+
+
+
+const bg = document.querySelector('.hero-section')
 let load = 0
 
 let int = setInterval(blurring, 20)
 
 function blurring() {
   load++
-
   if (load > 99) {
     clearInterval(int)
   }
-
-  
-  loadText.style.opacity = scale(load, 0, 100, 1, 0)
   bg.style.filter = `blur(${scale(load, 0, 60, 30, 0)}px)`
 }
 
