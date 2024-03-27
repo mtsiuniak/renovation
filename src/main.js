@@ -1,3 +1,4 @@
+import n from 'accordion-js';
 import Accordion from 'accordion-js';
 import 'accordion-js/dist/accordion.min.css';
 import iziToast from 'izitoast';
@@ -95,18 +96,32 @@ const accordion = new Accordion('#accordion', {
 // FAQ start ================
 
 // Order section start =======
-const orderBtn = document.querySelector('.order-form-btn')
-const form = document.querySelector('.order-form');
 
-orderBtn.addEventListener('click', onOrderBtn);
 
-function onOrderBtn(event) {
-  event.preventDefault();
+const submitBtn = document.querySelector('.order-form-btn');
+const form = document.getElementById('form');
+const result = document.getElementById('result');
+console.log(submitBtn);
+
+submitBtn.addEventListener('click', onSubmit);
+function onSubmit(e) {
+  e.preventDefault(); 
+
   const name = form.elements.name.value.trim();
   const email = form.elements.email.value.trim();
   const comments = form.elements.comments.value.trim();
-
-   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  console.log(name, email, comments);
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (name === "" || email === "" || comments === "") {
+   
+    iziToast.warning({
+      title: 'Caution',
+      message: 'Fill in all fields',
+      backgroundColor: '#fafafa',
+      color: '#070707'
+    });
+    return;
+  }
 
   if (!emailRegex.test(email)) {
     
@@ -116,17 +131,44 @@ function onOrderBtn(event) {
       backgroundColor: '#fafafa',
       color: '#070707'
     });
-  }
-
-  if (!name || !email || !comments) {
-    event.preventDefault();
-    iziToast.warning({
-      title: 'Caution',
-      message: 'Fill in all fields',
-      backgroundColor: '#fafafa',
-      color: '#070707'
-    });
+    return; 
   }
   
+  const formData = new FormData(form);
+  const object = Object.fromEntries(formData);
+  const json = JSON.stringify(object);
+
+  fetch('https://api.web3forms.com/submit', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json'
+    },
+    body: json
+  })
+  .then(async (response) => {
+    let json = await response.json();
+    if (response.status == 200) {
+      iziToast.success({
+        title: 'OK',
+        message: 'Successfully sent!',
+      });
+    } else {
+      console.log(response);
+    }
+  })
+  .catch(error => {
+    iziToast.error({
+    title: 'Error',
+    message: 'Server problems',
+});
+  })
+  .then(function() {
+    form.reset();
+    setTimeout(() => {
+      result.style.display = "none";
+    }, 1500);
+  });
 }
+
 // Order section end =========
