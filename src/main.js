@@ -8,29 +8,25 @@ import 'swiper/css/bundle';
 // hero js start -----
 
 const swiper = new Swiper('.swiper-container', {
-  direction: 'horizontal',
   loop: true,
-  
-  autoplay: {
-    delay: 1500,
-    disableOnInteraction: false,
+     slidesPerView: 4,
+       autoplay: {
+        delay: 1500,
+        disableOnInteraction: false,
   },
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-  slidesPerView: 1,
-  breakpoints: {
-    320: {
-      slidesPerView: 2,
-    },
-    768: {
-      slidesPerView: 3,
-    },
-    1440: {
-      slidesPerView: 4,
-    },
-  },
+       breakpoints: {
+        375: {
+          slidesPerView: 1,
+        },
+        768: {
+          slidesPerView: 3,
+        },
+        1280: {
+          slidesPerView: 4,
+          
+        },
+      },
+      
 });
 
 

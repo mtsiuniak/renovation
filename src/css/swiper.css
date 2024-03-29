@@ -1,26 +1,31 @@
-.swiper-section {
+.custom-container {
+    overflow: hidden;
+    padding: 0;
+}
+.swiper-container {
+    width: 1280px;
+    height: 400px;
     margin: 0 auto;
+   
     overflow: hidden;
 }
-.swiper-wrapper {
-    display: flex;
-}
-.swiper-pagination {
-    display: none;
-    visibility: collapse;
-    opacity: 0;
-}
-
-@media (min-width:768px) {
-    .swiper-section {
-        max-width: 768px;
-        
-    }
-}
 
 
-@media (min-width:1280px) {
-    .swiper-section {
-        max-width: 1280px;
+
+.swiper-slide img {
+    display: block;
+    height: 100%;
+    object-fit: cover;
+}
+@media (min-width: 768px) {
+    
+    .swiper-container {
+        width: 768px;
+        overflow: hidden;
+        }
+}
+@media (min-width: 1280px) {
+    .swiper-container {
+        width: 1280px;
     }
 }
