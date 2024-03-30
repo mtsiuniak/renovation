@@ -22,10 +22,7 @@
     text-transform: uppercase;
     transition: letter-spacing 300ms linear, background-color 300ms linear;
  }
- .gallery-link:focus, .gallery-link:hover {
-    letter-spacing: 0.35em;
-    background-color: #070707;
- }
+ 
  
  .mySwiper .swiper-slide {
      font-size: 18px;
@@ -70,6 +67,10 @@
  }
  
  @media (min-width: 768px) {
+    .gallery-link:focus, .gallery-link:hover {
+        letter-spacing: 0.35em;
+        background-color: #070707;
+    }
     .gallery-link {
         font-size: 2.5em;
     }
