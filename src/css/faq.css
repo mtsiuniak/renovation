@@ -31,7 +31,6 @@
 .ac-second {
   border-right: none;
 }
-
 .faq-list .faq-list-item {
   background-color: #070707;
   padding: 32px 16px;
@@ -42,7 +41,6 @@
   border-left: none;
   border-right: none;
   border-bottom: none;
-
 }
 .faq-list .faq-list-item .ac-trigger {
   color: #fafafa;
@@ -51,7 +49,6 @@
 #accordion .ac-trigger[aria-expanded='true'] .faq-accordion-icon {
   transform: rotate(180deg);
 }
-
 .faq-list .faq-list-item .ac-panel .ac-text {
 color: #f3ecdde6;
 }
@@ -60,14 +57,11 @@ color: #f3ecdde6;
       max-width: 1050px;
     }
 }
-
 @media (min-width: 1280px) {
   .faq-list-item {
     width: 600px;
   }
-
   .faq-list .faq-list-item {
     padding: 32px 20px;
   }
-    
 }

@@ -12,7 +12,6 @@
   filter: blur(0px);
   overflow-y: hidden;
 }
-
 .hero-container {
   display: flex;
   flex-direction: column;
@@ -20,7 +19,6 @@
   justify-content: center; 
   gap: 40px; 
 }
-
 .main-title {
   max-width: 436px;
   text-align: center;
@@ -31,7 +29,6 @@
   text-transform: capitalize;
   z-index: 999;
 }
-
 .order-service-button {
   font-family: "Roboto", sans-serif;
   padding: 12px 24px;
@@ -48,7 +45,6 @@
   border: 2px solid #fafafa;
   border-radius: 4px;
 }
-
 @media screen and (min-width: 768px) {
 .main-title {
   max-width: 424px;
@@ -56,17 +52,14 @@
   font-weight: 500;
   }
 }
-
 @media screen and (min-width: 1280px) {
   .hero-container {
       flex-direction: row;
     }
-
   .hero-section {
     height: 100vh;
     
   }
- 
   .main-title {
     margin-left: 160px;
     margin-left: auto;
@@ -74,18 +67,14 @@
     font-size: 80px;
     font-weight: 500;
   }
-
   .order-service-button {
     font-weight: 600;
     transition: all 250ms linear;
-    
   }
-
   .order-service-button:hover,
   .order-service-button:focus {
     background-color: #07070750;
     border-color: #07070750;
     transform: translateY(-5px);
   }
-   
 }

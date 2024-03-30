@@ -18,6 +18,7 @@
     box-shadow: 0 0 55px #555454;
     letter-spacing: 0.1em;
     font-weight: 400;
+    cursor: pointer;
     color: #fafafa;
     margin-bottom: 40px;
     text-transform: uppercase;
@@ -81,7 +82,7 @@
  .mySwiper .swiper-pagination-bullet-active {
     width: 10px;
     height: 10px;
-    background: #fafafa;
+    background: #070707;
  }
  
  @media (min-width: 768px) {

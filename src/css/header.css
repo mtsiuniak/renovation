@@ -1,4 +1,3 @@
-
 .header-page {
     position: absolute;
     top: 0;
@@ -9,24 +8,20 @@
     padding-top: 20px;
     padding-bottom: 20px;
 }
-
 .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
 .navigation-menu {
     display: none;
 }
-
 .header-right-part {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 12px;
 }
-
 .navigation-link {
     position: relative;
     display: block;
@@ -41,7 +36,6 @@
     text-transform: uppercase;
     transition: transform 250ms linear;
 }
-
 .navigation-link::after {
     content: '';
     position: absolute;
@@ -52,7 +46,6 @@
     background-color: rgba(243, 236, 221, 0);
     transition: height 250ms linear, background-color 250ms linear;
 }
-
 .navigation-link:hover::after {
     height: 2px;
     background-color: rgba(243, 236, 221, 0.9);
@@ -60,22 +53,18 @@
 .navigation-link:hover, .navigation-link:focus {
     transform: translateY(-5px);
 }
-
 .email-address {
     display: none;
 }
-
 .phone-number {
     display: block;
 }
-
 .social-link-list {
     display: none;
     gap: 12px;
     justify-content: center;
     align-items: center;
 }
-
 .header-link {
     display: flex;
     justify-content: center;
@@ -86,7 +75,6 @@
     background: #3B3B3B;
     transition: background-color 250ms linear;
 }
-
 .header-link:focus,
 .header-link:hover {
     background-color: #070707;
@@ -95,15 +83,12 @@
     fill: rgba(243, 236, 221, 0.9);
     transition: all 300ms linear, fill 300ms linear;
 }
-
 .icon-paint:hover, .icon-paint:focus {
     fill: #3B3B3B;
 }
-
 .mobile-open-btn-icon {
     stroke: #070707;
 }
-
 .mobile-open-btn {
     background-color: transparent;
     border: none;
@@ -111,9 +96,7 @@
     letter-spacing: 0;
     padding: 0;
 }
-
 @media screen and (min-width: 768px) {
-
     .header-right-part {
         gap: 20px;
     }
@@ -127,12 +110,10 @@
     .email-address {
         display: block;
     }
-
     .mobile-open-btn-icon {
         width: 54px;
         height: 40px;
     }
-
     .social-link-list {
         display: flex;
         gap: 12px;
@@ -142,27 +123,21 @@
 }
 
 @media screen and (min-width: 1280px) {
-
     .mobile-open-btn {
         display: none;
     }
-
-    
-
     .navigation-menu {
         display: flex;
         justify-content: space-between;
         align-items: center;
         gap: 25px;
     }
-
     .navigation {
         display: flex;
         justify-content: space-between;
         align-items: center;
         gap: 60px;
     }
-
     .email-address {
         display: block;
     }
