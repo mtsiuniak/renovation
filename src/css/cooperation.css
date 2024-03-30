@@ -1,6 +1,7 @@
  .cooperation-container {
    padding-top: 90px;
    padding-bottom: 80px;
+   overflow: hidden;
  }
  .explore {
     display: flex;
@@ -29,6 +30,7 @@
      transform: translateX(0%);
  }
  .cooperation-text {
+    display: none;
     padding: 10px 30px;
     font-size: 1em;
     letter-spacing: 0.1em;

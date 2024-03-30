@@ -194,6 +194,7 @@ window.addEventListener('scroll', function() {
   if (visibleBottom >= sectionBottom) {
     cooperationTitle.classList.add('active');
     cooperationText.classList.add('active');
+    cooperationText.style.display = 'block';
   } else {
     cooperationTitle.classList.remove('active');
     cooperationText.classList.remove('active');
