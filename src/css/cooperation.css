@@ -2,35 +2,54 @@
    padding-top: 90px;
    padding-bottom: 80px;
  }
- .gallery-link-container {
+ .explore {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 100px;
-    min-width: 320px;
-    align-self: center;
+    gap: 12px;
  }
- .gallery-link {
-    position: relative;
-    padding: 10px 30px;
-    font-size: 1.5em;
+ .cooperation-title {
+    text-align: center;
+    padding: 10px;
+    font-size: 1.2em;
     background-color: #191616;
     border-radius: 4px;
     box-shadow: 0 0 55px #555454;
     letter-spacing: 0.1em;
     font-weight: 400;
+    color: #fafafa;
+    margin-bottom: 40px;
     text-transform: uppercase;
-    transition: letter-spacing 300ms linear, background-color 300ms linear;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 0.5s ease, transform 0.5s ease, letter-spacing 300ms linear, background-color 300ms linear;
  }
- 
- 
+ .cooperation-title.active {
+     opacity: 1;
+     transform: translateX(0%);
+ }
+ .cooperation-text {
+    padding: 10px 30px;
+    font-size: 1em;
+    letter-spacing: 0.1em;
+    font-weight: 400;
+    opacity: 0;
+    text-indent: 20px;
+    text-align: center;
+    margin-bottom: 40px;
+    transform: translateX(100%);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+ }
+ .cooperation-text.active {
+     opacity: 1;
+     transform: translateX(0%);
+ }
  .mySwiper .swiper-slide {
      font-size: 18px;
      color: #fafafa;
      box-sizing: border-box;
      padding: 40px 60px;
  }
- 
  .parallax-bg {
     background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5)), url('../img/cooperation.jpg');
      position: absolute;
@@ -42,16 +61,13 @@
      background-size: cover;
      background-position: center;
  }
-
  .mySwiper .swiper-slide .title {
      font-size: 40px;
      font-weight: 300;
  }
-
  .mySwiper .swiper-slide .subtitle {
      font-size: 28px;
  }
-
  .mySwiper .swiper-slide .text {
      font-size: 14px;
      max-width: 400px;
@@ -67,12 +83,24 @@
  }
  
  @media (min-width: 768px) {
-    .gallery-link:focus, .gallery-link:hover {
+    .cooperation-title {
+        text-align: center;
+        padding: 20px 40px;
+        font-size: 1.5em;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+    }
+    .cooperation-text {
+        padding: 20px 50px;
+        font-size: 1.2em;
+        letter-spacing: 0.1em;
+        text-indent: 28px;
+        margin-bottom: 60px;
+    }
+    .cooperation-title:hover,
+    .cooperation-title:focus {
         letter-spacing: 0.35em;
         background-color: #070707;
-    }
-    .gallery-link {
-        font-size: 2.5em;
     }
     .mySwiper .swiper-slide {
         color: #fafafa;
@@ -92,3 +120,27 @@
         line-height: 1.5;
     }
  }
+
+ @media (min-width: 1280px) {
+    .cooperation-title {
+        padding: 24px 44px;
+    }
+    .cooperation-text {
+        padding: 24px 52px;
+        font-size: 1.2em;
+        letter-spacing: 0.1em;
+        text-indent: 32px;
+        margin-bottom: 68px;
+    }
+    .mySwiper .swiper-slide .title {
+        font-size: 68px;
+    }
+    .mySwiper .swiper-slide .subtitle {
+        font-size: 44px;
+    }
+    .mySwiper .swiper-slide .text {
+        font-size: 28px;
+        max-width: 500px;
+    }
+ }
+

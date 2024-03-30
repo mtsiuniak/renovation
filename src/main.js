@@ -180,6 +180,27 @@ function onSubmit(e) {
 
 
 // cooperation section start =========
+
+const cooperationTitle = document.querySelector('.cooperation-title');
+const cooperationText = document.querySelector('.cooperation-text');
+
+window.addEventListener('scroll', function() {
+  const sectionTop = document.querySelector('.cooperation-section').offsetTop;
+  const windowHeight = window.innerHeight;
+  const scrollPosition = window.scrollY;
+  const visibleBottom = scrollPosition + windowHeight;
+  const sectionBottom = sectionTop + (document.querySelector('.cooperation-section').offsetHeight * 0.2); 
+  
+  if (visibleBottom >= sectionBottom) {
+    cooperationTitle.classList.add('active');
+    cooperationText.classList.add('active');
+  } else {
+    cooperationTitle.classList.remove('active');
+    cooperationText.classList.remove('active');
+  }
+});
+
+
  new Swiper(".cooperation-container .swiper", {
         speed: 600,
         parallax: true,
