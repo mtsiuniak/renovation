@@ -5,21 +5,20 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top: 100px;
+  padding-top: 350px;
+  padding-bottom: 350px;
   min-width: 320px;
-  height: 100svh;
+  height: auto;
   filter: blur(0px);
   overflow-y: hidden;
 }
-
 
 .hero-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between; 
+  justify-content: center; 
   gap: 40px; 
-  padding-bottom: 600px;
 }
 
 .main-title {
@@ -35,10 +34,10 @@
 
 .order-service-button {
   font-family: "Roboto", sans-serif;
-  min-width: 244px;
-  height: 68px;
-  color: #070707;
-  background-color: #fafafa;
+  padding: 12px 24px;
+  color: #fafafa;
+  background-color: transparent;
+  opacity: 0.7;
   font-weight: 600;
   font-size: 24px;
   line-height: 1.5;
@@ -46,39 +45,27 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid #070707;
-  border-radius: 8px;
-  transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: border-color 300ms linear, color 300ms linear;
+  border: 2px solid #fafafa;
+  border-radius: 4px;
 }
-
 
 @media screen and (min-width: 768px) {
-.hero-section{
-  padding-top: 200px;
-}
-
-.hero-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-  }
-
 .main-title {
   max-width: 424px;
   font-size: 68px;
   font-weight: 500;
   }
-
-.order-service-button {
-  opacity: 1;
-  }
- 
 }
 
 @media screen and (min-width: 1280px) {
+  .hero-container {
+      flex-direction: row;
+    }
+
+  .hero-section {
+    height: 100vh;
+    
+  }
  
   .main-title {
     margin-left: 160px;
@@ -88,25 +75,17 @@
     font-weight: 500;
   }
 
-  .hero-container {
-    flex-direction: row;
-  }
-
   .order-service-button {
     font-weight: 600;
-    border: 2px solid #070707;
-    opacity: 0.5;
-    border-radius: 12px;
-    transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition: border-color 350ms linear, color 300ms linear;
+    transition: all 250ms linear;
+    
   }
 
   .order-service-button:hover,
   .order-service-button:focus {
-    background-color: #070707;
-    opacity: 1;
-    border-color: #fafafa;
-    color: #fafafa;
+    background-color: #07070750;
+    border-color: #07070750;
+    transform: translateY(-5px);
   }
    
 }

@@ -154,7 +154,6 @@
         line-height: 1.318;
         letter-spacing: -0.03em;
         width: 542px;
-        margin-top: 100px;
     }
 
     .order-form-field {
@@ -196,7 +195,6 @@
     }
 
     .order-title {
-        margin-top: 75px;
         max-width: 662px;
     }
 

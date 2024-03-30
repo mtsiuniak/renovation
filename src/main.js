@@ -1,37 +1,32 @@
-import n from 'accordion-js';
 import Accordion from 'accordion-js';
 import 'accordion-js/dist/accordion.min.css';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.css';
 import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
-// hero js start -----
 
-const swiper = new Swiper('.swiper-container', {
+
+// about section start ========
+new Swiper('.swiper-container', {
+  effect: "fade",
+  centeredSlides: true, 
+  autoplay: {
+    delay: 1500,
+    disableOnInteraction: false,
+    },
   loop: true,
-     slidesPerView: 4,
-       autoplay: {
-        delay: 1500,
-        disableOnInteraction: false,
-  },
-       breakpoints: {
-        375: {
-          slidesPerView: 1,
-        },
-        768: {
-          slidesPerView: 3,
-        },
-        1280: {
-          slidesPerView: 4,
-          
-        },
+  slidesPerView: 1,
+       pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
       },
-      
 });
 
+// about section end ========
 
 
 
+// hero js start =======
 const bg = document.querySelector('.hero-section')
 let load = 0
 
@@ -48,9 +43,12 @@ function blurring() {
 const scale = (num, in_min, in_max, out_min, out_max) => {
   return ((num - in_min) * (out_max - out_min)) / (in_max - in_min) + out_min
 }
-// hero js end-----
+// hero js end ======
 
-// ------ scrol on hero section to order ----
+
+
+
+// smooth scrol start ==========
 
 const smoothLinks = document.querySelectorAll('a[href^="#"]');
 for (let smoothLink of smoothLinks) {
@@ -64,6 +62,11 @@ for (let smoothLink of smoothLinks) {
         });
     });
 };
+
+// smooth scrol end ==========
+
+
+
 
 // scroll top button start-----
 
@@ -85,19 +88,25 @@ scrollToTopBtn.addEventListener("click", () => {
 });
 // scroll top button end-----
 
+
+
+
+
 // FAQ start ================
-const accordion = new Accordion('#accordion', {
+new Accordion('#accordion', {
   showMultiple: true,
 });
 // FAQ start ================
 
-// Order section start =======
 
+
+
+
+// Order section start =======
 
 const submitBtn = document.querySelector('.order-form-btn');
 const form = document.getElementById('form');
 const result = document.getElementById('result');
-console.log(submitBtn);
 
 submitBtn.addEventListener('click', onSubmit);
 function onSubmit(e) {
@@ -166,5 +175,21 @@ function onSubmit(e) {
     }, 1500);
   });
 }
+// order section end =========
 
-// Order section end =========
+
+
+// cooperation section start =========
+ new Swiper(".cooperation-container .swiper", {
+        speed: 600,
+        parallax: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+ });
+    // cooperation section end =========
