@@ -7,6 +7,28 @@ import 'swiper/css/bundle';
 
 
 // about section start ========
+
+const aboutTitle = document.querySelector('.title-about-us');
+const aboutText = document.querySelector('.text-about-us');
+
+window.addEventListener('scroll', function() {
+  const sectionAboutTop = document.querySelector('.about-us').offsetTop;
+  const windowAboutHeight = window.innerHeight;
+  const scrollPosition = window.scrollY;
+  const visibleAboutBottom = scrollPosition + windowAboutHeight;
+  const sectionAboutBottom = sectionAboutTop + (document.querySelector('.about-us').offsetHeight * 0.2); 
+  
+  if (visibleAboutBottom >= sectionAboutBottom) {
+    aboutTitle.classList.add('active');
+    aboutText.classList.add('active');
+    aboutText.style.display = 'block';
+  } else {
+    aboutTitle.classList.remove('active');
+    aboutText.classList.remove('active');
+  }
+});
+
+
 new Swiper('.swiper-container', {
   effect: "fade",
   centeredSlides: true, 
