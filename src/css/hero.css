@@ -5,10 +5,10 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top: 350px;
+  padding-top: 300px;
   padding-bottom: 350px;
   min-width: 320px;
-  height: auto;
+  height: 100vh;
   filter: blur(0px);
   overflow-y: hidden;
 }

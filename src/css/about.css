@@ -9,14 +9,6 @@
     justify-content: center;
     align-items: center;
 }
-.title-about-us.active {
-    opacity: 1;
-    transform: translateX(0%);
-}
-.text-about-us.active {
-    opacity: 1;
-    transform: translateX(0%);
-}
 .swiper-container {
     position: relative;
     height: 375px;
@@ -41,16 +33,25 @@
     line-height: 1.37;
     letter-spacing: -0.03em;
     transform: translateX(-100%);
-    transition: opacity 0.5s ease, transform 0.5s ease, letter-spacing 300ms linear, background-color 300ms linear;
+    transition: opacity 2s ease, transform 2s ease, letter-spacing 2s linear, background-color 2s linear;
+}
+.title-about-us.active {
+    opacity: 1;
+    transform: translateX(0%);
 }
 .text-about-us {
+    opacity: 0;
     font-size: 24px;
     font-weight: 400;
     line-height: normal;
     letter-spacing: -0.04em;
     text-align: center;
-    transform: translateX(100%);
-    transition: opacity 0.5s ease, transform 0.5s ease;
+    transform: translateX(-100%);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.text-about-us.active {
+    opacity: 1;
+    transform: translateX(0%);
 }
 .wrapper-text {
     display: block;
@@ -101,7 +102,7 @@
         margin: 0;
     }
     .text-about-us {
-        font-size: 36px;
+        font-size: 44px;
     }
 }
 

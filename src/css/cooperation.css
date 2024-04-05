@@ -24,7 +24,7 @@
     text-transform: uppercase;
     opacity: 0;
     transform: translateX(-100%);
-    transition: opacity 0.5s ease, transform 0.5s ease, letter-spacing 300ms linear, background-color 300ms linear;
+    transition: opacity 2s ease, transform 2s ease, letter-spacing 300ms linear, background-color 300ms linear;
  }
  .cooperation-title.active {
      opacity: 1;
@@ -40,8 +40,8 @@
     text-indent: 20px;
     text-align: center;
     margin-bottom: 40px;
-    transform: translateX(100%);
-    transition: opacity 0.5s ease, transform 0.5s ease;
+    transform: translateX(-100%);
+    transition: opacity 0.8s ease, transform 0.8s ease;
  }
  .cooperation-text.active {
      opacity: 1;

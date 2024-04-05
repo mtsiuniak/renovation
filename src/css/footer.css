@@ -64,9 +64,10 @@
     bottom: -5px;
     left: 0;
     width: 100%;
-    height: 0;
+    height: 2px;
+    transform: scale(0);
     background-color: rgba(243, 236, 221, 0);
-    transition: height 0.25s linear, background-color 0.25s linear;
+    transition: all 300ms linear;
 }
 .footer-column ul li:hover,
 .footer-column ul li:focus {
@@ -74,7 +75,6 @@
 }
 .footer-column ul li a:hover::after,
     .footer-column a:hover::after {
-    height: 2px;
-    background-color: #fafafa;
+    transform: scale(1);
 }
 }
