@@ -6,7 +6,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   padding-top: 300px;
-  padding-bottom: 350px;
+  /* padding-bottom: 300px; */
   min-width: 320px;
   height: 100vh;
   filter: blur(0px);
@@ -20,7 +20,7 @@
   gap: 40px; 
 }
 .main-title {
-  max-width: 436px;
+  /* max-width: 436px; */
   text-align: center;
   font-size: 60px;
   font-weight: 400;
@@ -30,7 +30,7 @@
   z-index: 999;
 }
 .order-service-button {
-  font-family: "Roboto", sans-serif;
+  
   padding: 12px 24px;
   color: #fafafa;
   background-color: transparent;
@@ -47,7 +47,7 @@
 }
 @media screen and (min-width: 768px) {
 .main-title {
-  max-width: 424px;
+  /* max-width: 424px; */
   font-size: 68px;
   font-weight: 500;
   }
@@ -58,14 +58,13 @@
     }
   .hero-section {
     height: 100vh;
-    
   }
   .main-title {
-    margin-left: 160px;
+    /* margin-left: 160px;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: auto; */
     font-size: 80px;
-    font-weight: 500;
+    font-weight: 400;
   }
   .order-service-button {
     font-weight: 600;
