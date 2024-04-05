@@ -5,6 +5,25 @@ import 'izitoast/dist/css/iziToast.css';
 import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
 
+// hero js start =======
+// const bg = document.querySelector('.hero-section')
+// let load = 0
+
+// let int = setInterval(blurring, 20)
+
+// function blurring() {
+//   load++
+//   if (load > 99) {
+//     clearInterval(int)
+//   }
+//   bg.style.filter = `blur(${scale(load, 0, 60, 30, 0)}px)`
+// }
+
+// const scale = (num, in_min, in_max, out_min, out_max) => {
+//   return ((num - in_min) * (out_max - out_min)) / (in_max - in_min) + out_min
+// }
+// hero js end ======
+
 
 // about section start ========
 
@@ -45,30 +64,6 @@ new Swiper('.swiper-container', {
 });
 
 // about section end ========
-
-
-
-// hero js start =======
-const bg = document.querySelector('.hero-section')
-let load = 0
-
-let int = setInterval(blurring, 20)
-
-function blurring() {
-  load++
-  if (load > 99) {
-    clearInterval(int)
-  }
-  bg.style.filter = `blur(${scale(load, 0, 60, 30, 0)}px)`
-}
-
-const scale = (num, in_min, in_max, out_min, out_max) => {
-  return ((num - in_min) * (out_max - out_min)) / (in_max - in_min) + out_min
-}
-// hero js end ======
-
-
-
 
 // smooth scrol start ==========
 

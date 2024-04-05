@@ -38,10 +38,6 @@
 }
 .order-form-field:hover,
 .order-form-field:focus {
-    color: #fafafa;
-}
-.order-form-field:hover,
-.order-form-field:focus {
     border: 1px solid #fafafa;
 }
 .order-form-field:hover,

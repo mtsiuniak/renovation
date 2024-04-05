@@ -24,6 +24,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-size: 20px;
 }
 .faq-list-item p {
   max-width: 250px;
