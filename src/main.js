@@ -5,7 +5,7 @@ import 'izitoast/dist/css/iziToast.css';
 import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
 
-hero js start =======
+// hero js start =======
 // const bg = document.querySelector('.hero-section')
 // let load = 0
 
