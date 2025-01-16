@@ -110,9 +110,14 @@ scrollToTopBtn.addEventListener("click", () => {
 
 
 // FAQ start ================
-new Accordion('#accordion', {
-  showMultiple: true,
-});
+var element = document.getElementById('about-us');
+if (element) {
+  new Accordion('#accordion', {
+    showMultiple: true,
+  });
+}
+
+
 // FAQ start ================
 
 
@@ -120,6 +125,17 @@ new Accordion('#accordion', {
 
 
 // Order section start =======
+document.getElementById('user-phone').addEventListener('input', function (e) {
+  let value = e.target.value.replace(/\D/g, '');
+  if (value.length > 3 && value.length <= 6) {
+    value = `(${value.slice(0, 3)}) ${value.slice(3)}`;
+  } else if (value.length > 6) {
+    value = `(${value.slice(0, 3)}) ${value.slice(3, 6)}-${value.slice(6, 10)}`;
+  } else if (value.length > 3) {
+    value = `(${value.slice(0, 3)}) ${value.slice(3)}`;
+  }
+  e.target.value = value;
+});
 
 const submitBtn = document.querySelector('.order-form-btn');
 const form = document.getElementById('form');
