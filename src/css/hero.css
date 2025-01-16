@@ -5,8 +5,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top: 300px;
-  /* padding-bottom: 300px; */
+  padding-top: 200px;
   min-width: 320px;
   height: 100vh;
   filter: blur(0px);
@@ -17,56 +16,53 @@
   flex-direction: column;
   align-items: center;
   justify-content: center; 
-  gap: 40px; 
+  gap: 80px; 
 }
 .main-title {
-  /* max-width: 436px; */
   text-align: center;
-  font-size: 60px;
+  color: #d3cfcf;
+  font-size: 32px;
   font-weight: 400;
   line-height: 1.11;
   letter-spacing: 0.02em;
   text-transform: capitalize;
   z-index: 999;
 }
+.hero-info{
+  font-size: 24px;
+  text-align: center;
+  color: #d3cfcf;
+}
 .order-service-button {
-  
   padding: 12px 24px;
-  color: #fafafa;
+  color: #eeeeee;
   background-color: transparent;
   opacity: 0.7;
   font-weight: 600;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 1.5;
   letter-spacing: 0.04em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: none;
   border: 2px solid #fafafa;
   border-radius: 4px;
 }
 @media screen and (min-width: 768px) {
 .main-title {
-  /* max-width: 424px; */
-  font-size: 68px;
+  font-size: 40px;
   font-weight: 500;
   }
 }
 @media screen and (min-width: 1280px) {
-  .hero-container {
-      flex-direction: row;
-    }
+  
   .hero-section {
     height: 100vh;
   }
   .main-title {
-    /* margin-left: 160px;
-    margin-left: auto;
-    margin-right: auto; */
-    font-size: 80px;
+    font-size: 60px;
     font-weight: 400;
   }
   .order-service-button {
+    display: flex;
     font-weight: 600;
     transition: all 250ms linear;
   }

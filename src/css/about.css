@@ -28,7 +28,7 @@
 }
 .title-about-us {
     margin-bottom: 40px;
-    font-size: 60px;
+    font-size: 28px;
     font-weight: 500;
     line-height: 1.37;
     letter-spacing: -0.03em;
@@ -41,7 +41,7 @@
 }
 .text-about-us {
     opacity: 0;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 400;
     line-height: normal;
     letter-spacing: -0.04em;
@@ -73,7 +73,7 @@
         min-width: 704px;
     }
     .title-about-us {
-        font-size: 64px;
+        font-size: 32px;
         line-height: 1.45;
         letter-spacing: -0.03em;
     }
@@ -98,11 +98,11 @@
         padding: 24px;
     }
     .title-about-us{
-        font-size: 72px;
+        font-size: 44px;
         margin: 0;
     }
     .text-about-us {
-        font-size: 40px;
+        font-size: 32px;
     }
 }
 
