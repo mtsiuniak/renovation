@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="/renovation/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/renovation/assets/main-logo-4ae09928.png" type="image">
   <title>Renovation New Jersey</title>
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css">
@@ -22,20 +22,14 @@
   <header class="header-page">
     <div class="container header-container">
         <a class="middle" href="../index.html">
-            <img class="middle-img" src="../img/main-logo.png"  alt="logo">
+            <img class="middle-img" src="../img/gallery-pictures/IMG_3542.jpg"  alt="logo">
         </a>
         <div class="header-left-part">
             <nav class="navigation">
-                <!-- <a class="logo" href="./index.html">
-                   <img src="../img/logo/Untitled Project (4).png" width="44px" height="44px" alt="logo">
-                </a> -->
                 
-
+            
                 <ul class="navigation-menu">
                     
-                    <!-- <li class="navigation-item smooth-scroll">
-                        <a class="navigation-link smooth-scroll" href="#order-link">Get information</a>
-                    </li> -->
                     <li class="navigation-item smooth-scroll">
                         <a class="navigation-link smooth-scroll" href="../pages/gallery.html">Portfolio</a>
                     </li>
@@ -43,7 +37,7 @@
                         <a class="navigation-link smooth-scroll" href="#about-us">About us</a>
                     </li>
                     <li class="navigation-item">
-                        <a class="navigation-link smooth-scroll" href="#about-us">Our services</a>
+                        <a class="navigation-link smooth-scroll" href="#cooperation-section">Our services</a>
                     </li>
 
                 </ul>
@@ -65,7 +59,7 @@
 
             <button class="mobile-open-btn" type="button">
                 <svg class="mobile-open-btn-icon" width="44" height="30">
-                    <use href="/renovation/assets/icons-0f62e149.svg#icon-burger"></use>
+                    <use href="../img/icons.svg#icon-burger"></use>
                 </svg>
             </button>
 
@@ -86,6 +80,7 @@
 
 </section>
     <section id="about-us" class="about-us">
+  <p><br/></p>
   <div class="container about-container">
     <div class="wrapper-text">
       <h2 class="title-about-us">About Us</h2>
@@ -121,7 +116,7 @@
     </div>
   </div>
 </section>
-    <section class="cooperation-section">
+    <section  class="cooperation-section">
     <div class="container cooperation-container">
         <div class="explore">
             <a class="cooperation-title" href="./pages/gallery.html">Explore Our Gallery
@@ -134,7 +129,7 @@
             redesigned
             living spaces, get inspired for your next project.</p>
 
-        <div class="swiper mySwiper">
+        <div id="cooperation-section" class="swiper mySwiper">
             <div class="parallax-bg" data-swiper-parallax="-23%"></div>
             <div class="swiper-wrapper">
                 <div class="swiper-slide cooperation-swiper-slide">
@@ -218,13 +213,17 @@
 
 
 </script>
-    <section class="order-section section-background">
+    <section  id="order-link" class="order-section section-background">
+  <p>
+  <br/>
+  <br/>
+  </p>
 
   <div class="order-section-wrapper container">
 
     <div class="order-form-box">
 
-      <h2 class="order-title" id="order-link">Your order is our priority:
+      <h2 class="order-title">Your order is our priority:
         Personalized approach and quality of service
       </h2>
 
@@ -234,6 +233,11 @@
           <input class="order-form-field" type="text" name="name" id="user-name" required
             placeholder="Enter full name" />
         </label>
+
+        <label class="order-form-field-label" for="user-phone">
+  <input class="order-form-field" type="tel" name="phone" id="user-phone"
+    placeholder="(123) 456-7890" maxlength="14" required />
+</label>
 
         <label class="order-form-field-label" for="user-email">
           <input class="order-form-field" type="email" name="email" id="user-email"
@@ -265,6 +269,11 @@
 
 </section>
     <section class="faq-section" id="faq-section">
+  <p>
+    <br/>
+    <br/>
+    <br/>
+    </p>
   <div class="container">
 
     <h2 class="faq-title-section">FAQ</h2>
@@ -415,24 +424,24 @@
             <ul class="footer-list">
                 <li>
                     <a class="contact-information phone-number phone-number-footer"
-                        href="tel:+16316336504">(631)-633-6504</a>
+                        href="tel:+16316336504">(631)633-6504</a>
                 </li>
                 <li>
                     <a class="contact-information email-address email-address-footer"
-                        href="mailto:grandeurhomeimprovements@gmail.com">press to email</a>
+                        href="mailto:grandeurhomeimprovements@gmail.com">Email us</a>
                 </li>
                 <li><a href="#order-link">Order</a></li>
                 <li><a href="#about-us">About us</a></li>
-                <li><a href="">Gallery</a></li>
+                <li><a href="../pages/gallery.html">Portfolio</a></li>
                 <li><a href="#faq-section">FAQ</a></li>
             </ul>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024. created by @mtsiuniak. </p>
+            <p>&copy; Copyright 2025 GHI </p>
         </div>
         <button id="scrollToTopBtn" class="scroll-to-top-btn" title="Go to top">
             <svg class="icon-top" style="transform: rotate(180deg);" width="44" height="44">
-                <use xlink:href="/renovation/assets/icons-0f62e149.svg#icon-arrow-down"></use>
+                <use xlink:href="../img/icons.svg#icon-arrow-down"></use>
             </svg>
         </button>
     </div>
@@ -443,7 +452,7 @@
 
   <button class="button-close" type="button">
     <svg class="close-img" width="18" height="18">
-      <use href="/renovation/assets/icons-0f62e149.svg#icon-close"></use>
+      <use href="../img/icons.svg#icon-close"></use>
     </svg>
   </button>
 
