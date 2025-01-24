@@ -1,0 +1,55 @@
+<section  id="order-link" class="order-section section-background">
+  <p>
+  <br/>
+  <br/>
+  </p>
+
+  <div class="order-section-wrapper container">
+
+    <div class="order-form-box">
+
+      <h2 class="order-title">Your order is our priority:
+        Personalized approach and quality of service
+      </h2>
+
+      <form class="order-form" method="POST" id="form">
+        <input type="hidden" name="access_key" value="51cb3eb7-9ed2-4d5c-8814-9c428900b389">
+        <label class="order-form-field-label" for="user-name">
+          <input class="order-form-field" type="text" name="name" id="user-name" required
+            placeholder="Enter full name" />
+        </label>
+
+        <label class="order-form-field-label" for="user-phone">
+  <input class="order-form-field" type="tel" name="phone" id="user-phone"
+    placeholder="(123) 456-7890" maxlength="14" required />
+</label>
+
+        <label class="order-form-field-label" for="user-email">
+          <input class="order-form-field" type="email" name="email" id="user-email"
+            pattern="(^[^\s@]+@[^\s@]+\.[^\s@]+$)" placeholder="Enter your email" required />
+        </label>
+
+        <label class="order-form-field-label" for="user-comments">
+          <textarea class="order-form-comments" name="comments" id="user-comments" placeholder="Comments"
+            required></textarea>
+        </label>
+
+        <button class="order-form-btn" type="submit">
+          <div id="result"></div>
+          Send
+          <svg class="order-form-btn-icon" width="26" height="10">
+            <use href="./img/icons.svg#icon-arrow"></use>
+          </svg>
+        </button>
+
+      </form>
+    </div>
+    <div class="order-form-image-wrapper">
+      <img class="order-form-image" src="./img/gallery-pictures/IMG_3551.jpg" alt="order image" width="450" />
+    </div>
+  </div>
+
+
+
+
+</section>
