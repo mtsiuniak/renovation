@@ -51,7 +51,7 @@ body {
     clip-path: inset(100%);
     overflow: hidden;
 }
-.scroll-to-top-btn {
+/* .scroll-to-top-btn {
     display: none;
     position: fixed;
     bottom: 36px;
@@ -73,7 +73,7 @@ body {
 .scroll-to-top-btn:hover,
 .scroll-to-top-btn:focus {
     fill: #2a2a2d;
-}
+} */
 .arrow-up-icon {
     font-size: 24px;
 }

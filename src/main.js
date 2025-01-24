@@ -5,24 +5,6 @@ import 'izitoast/dist/css/iziToast.css';
 import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
 
-// hero js start =======
-// const bg = document.querySelector('.hero-section')
-// let load = 0
-
-// let int = setInterval(blurring, 20)
-
-// function blurring() {
-//   load++
-//   if (load > 99) {
-//     clearInterval(int)
-//   }
-//   bg.style.filter = `blur(${scale(load, 0, 60, 30, 0)}px)`
-// }
-
-// const scale = (num, in_min, in_max, out_min, out_max) => {
-//   return ((num - in_min) * (out_max - out_min)) / (in_max - in_min) + out_min
-// }
-// hero js end ======
 
 
 // about section start ========
@@ -87,23 +69,23 @@ for (let smoothLink of smoothLinks) {
 
 // scroll top button start-----
 
-const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+// const scrollToTopBtn = document.getElementById("scrollToTopBtn");
 
-window.addEventListener("scroll", () => {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        scrollToTopBtn.style.display = "block";
-    } else {
-        scrollToTopBtn.style.display = "none";
-    }
-});
+// window.addEventListener("scroll", () => {
+//     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+//         scrollToTopBtn.style.display = "block";
+//     } else {
+//         scrollToTopBtn.style.display = "none";
+//     }
+// });
 
-scrollToTopBtn.addEventListener("click", () => {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
-});
-// scroll top button end-----
+// scrollToTopBtn.addEventListener("click", () => {
+//     window.scrollTo({
+//         top: 0,
+//         behavior: "smooth"
+//     });
+// });
+// // scroll top button end-----
 
 
 

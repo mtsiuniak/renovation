@@ -28,6 +28,48 @@ const links = document.querySelectorAll('.mobile-menu a');
 
 links.forEach(link => {
     link.addEventListener('click', () => {
-        menu.classList.remove('is-open'); // 
+        menu.classList.remove('is-open'); 
     });
 });
+
+
+// // smooth scrol start ==========
+
+// const smoothLinks = document.querySelectorAll('a[href^="#"]');
+// for (let smoothLink of smoothLinks) {
+//     smoothLink.addEventListener('click', function (e) {
+//         e.preventDefault();
+//         const id = smoothLink.getAttribute('href');
+
+//         document.querySelector(id).scrollIntoView({
+//             behavior: 'smooth',
+//             block: 'start'
+//         });
+//     });
+// };
+
+// // smooth scrol end ==========
+
+
+
+
+// // scroll top button start-----
+
+// const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+// window.addEventListener("scroll", () => {
+//     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+//         scrollToTopBtn.style.display = "block";
+//     } else {
+//         scrollToTopBtn.style.display = "none";
+//     }
+// });
+
+// scrollToTopBtn.addEventListener("click", () => {
+//     window.scrollTo({
+//         top: 0,
+//         behavior: "smooth"
+//     });
+// });
+// // scroll top button end-----
+
